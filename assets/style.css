@@ -1,0 +1,141 @@
+/* ==========================================================================
+   CreateFuture — Colors & Type
+   Source: CreateFuture Brand Guidelines v1.1 (Jan 2024) + CF-Homepage.fig
+   ========================================================================== */
+
+:root {
+  /* ---------- Core colours (Level 1 — use everywhere) ---------- */
+  --cf-carbon:   #0A0019;  /* near-black with a whisper of violet — default ink */
+  --cf-midnight: #24004C;  /* deep purple — dominant base alt to Carbon */
+  --cf-white:    #FFFFFF;
+  --cf-cloud:    #F2F2F2;  /* only ever used in small quantities */
+  --cf-acid:     #C4FF35;  /* highlight only — used sparingly */
+
+  /* ---------- Depth palette (Level 2 & 3 — never dominate) ---------- */
+  --cf-pink-dark:    #7D2271;
+  --cf-pink-medium:  #A04594;
+  --cf-pink-bright:  #FE7AF6;
+  --cf-green-dark:   #007D8A;
+  --cf-green-bright: #00FFB5;
+  --cf-blue-dark:    #0F8BAF;
+  --cf-blue-bright:  #10DEFF;
+
+  /* ---------- Observed working tones (from the Figma file) ---------- */
+  --cf-carbon-80:   rgba(10, 0, 25, 0.80);
+  --cf-carbon-60:   rgba(10, 0, 25, 0.60);
+  --cf-carbon-40:   rgba(10, 0, 25, 0.40);
+  --cf-white-80:    rgba(255, 255, 255, 0.80);
+  --cf-white-60:    rgba(255, 255, 255, 0.60);
+  --cf-white-20:    rgba(255, 255, 255, 0.20);
+  --cf-divider:     #D6D6D6;     /* hairlines on light bg */
+  --cf-muted-grey:  #909090;     /* meta / labels on light bg */
+  --cf-ink-muted:   #444444;     /* body alt */
+
+  /* ---------- Semantic — light surface ---------- */
+  --cf-bg:          var(--cf-white);
+  --cf-bg-alt:      var(--cf-cloud);
+  --cf-fg:          var(--cf-carbon);
+  --cf-fg-muted:    var(--cf-muted-grey);
+  --cf-border:      var(--cf-carbon);      /* full-weight borders are Carbon, 0.5–1px */
+  --cf-border-soft: var(--cf-divider);
+  --cf-accent:      var(--cf-acid);
+
+  /* ---------- Type families ---------- */
+  --cf-font-display: "Syne", "Syne Bold", system-ui, sans-serif;
+  --cf-font-body:    "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --cf-font-mono:    "Roboto Mono", ui-monospace, Menlo, monospace;
+
+  /* ---------- Type scale (observed in Figma + guidelines) ---------- */
+  --cf-fs-hero:        80px;  /* hero headlines, centred */
+  --cf-fs-display:     60px;  /* CTA banners */
+  --cf-fs-h1:          40px;
+  --cf-fs-h2:          36px;
+  --cf-fs-h3:          30px;
+  --cf-fs-h4:          24px;
+  --cf-fs-h5:          18px;
+  --cf-fs-intro:       18px;
+  --cf-fs-body:        16px;
+  --cf-fs-small:       14px;
+  --cf-fs-meta:        12px;
+
+  /* ---------- Leading / tracking (per guidelines) ---------- */
+  --cf-lh-display:   1.05;    /* @kind other */ /* Syne Bold headlines */
+  --cf-lh-heading:   1.2;     /* @kind other */ /* intro + sub-heading */
+  --cf-lh-body:      1.5;     /* @kind other */ /* Montserrat Medium body */
+  --cf-lh-long:      1.8;     /* @kind other */ /* Montserrat Light long copy */
+  --cf-ls-display:  -0.011em; /* Syne at large sizes */
+  --cf-ls-body:      0.010em;
+  --cf-ls-eyebrow:   0.030em; /* 400pt optical tracking ≈ 30 thousandths em */
+
+  /* ---------- Spacing (Figma observed; 8 rhythm, loose grid) ---------- */
+  --cf-space-1:  4px;
+  --cf-space-2:  8px;
+  --cf-space-3:  16px;
+  --cf-space-4:  24px;
+  --cf-space-5:  32px;
+  --cf-space-6:  48px;
+  --cf-space-7:  64px;
+  --cf-space-8:  80px;
+  --cf-space-9:  104px;  /* page gutter at 1440 */
+  --cf-space-10: 160px;
+
+  /* ---------- Radii (CF design is intentionally SQUARE) ---------- */
+  --cf-radius-0: 0;
+  --cf-radius-1: 2px;
+  --cf-radius-2: 4px;
+  /* Anything larger than 4px is off-brand. Buttons are hard-edged. */
+
+  /* ---------- Borders ---------- */
+  --cf-bw-hair:  0.5px;
+  --cf-bw-thin:  1px;
+  --cf-bw-med:   2px;
+
+  /* ---------- Elevation (used very lightly — mostly flat) ---------- */
+  --cf-shadow-sm: 0 1px 2px rgba(19,19,20,0.12);
+  --cf-shadow-md: 0 6px 16px rgba(0,0,0,0.12);
+  --cf-shadow-lg: 0 16px 48px rgba(0,0,0,0.30);
+
+  /* ---------- Grid ---------- */
+  --cf-grid-max:    1440px;   /* Figma desktop frame */
+  --cf-grid-gutter: 104px;    /* left/right gutter on desktop */
+  --cf-nav-height:  72px;
+}
+
+/* ---------- Semantic typography ----------------------------------------- */
+
+html { font-family: var(--cf-font-body); color: var(--cf-fg); background: var(--cf-bg); -webkit-font-smoothing: antialiased; }
+body { margin: 0; font-size: var(--cf-fs-body); line-height: var(--cf-lh-body); letter-spacing: var(--cf-ls-body); font-weight: 500; }
+
+.cf-hero,
+h1.cf-hero {
+  font-family: var(--cf-font-display);
+  font-weight: 700;
+  font-size: var(--cf-fs-hero);
+  line-height: var(--cf-lh-display);
+  letter-spacing: var(--cf-ls-display);
+  margin: 0;
+}
+
+h1, .cf-h1 { font-family: var(--cf-font-display); font-weight: 700; font-size: var(--cf-fs-h1); line-height: 1.2; letter-spacing: var(--cf-ls-display); margin: 0; }
+h2, .cf-h2 { font-family: var(--cf-font-display); font-weight: 700; font-size: var(--cf-fs-h2); line-height: 1.2; letter-spacing: var(--cf-ls-display); margin: 0; }
+h3, .cf-h3 { font-family: var(--cf-font-display); font-weight: 700; font-size: var(--cf-fs-h3); line-height: 1.2; letter-spacing: var(--cf-ls-display); margin: 0; }
+h4, .cf-h4 { font-family: var(--cf-font-display); font-weight: 700; font-size: var(--cf-fs-h4); line-height: 1.25; letter-spacing: var(--cf-ls-display); margin: 0; }
+h5, .cf-h5 { font-family: var(--cf-font-display); font-weight: 700; font-size: var(--cf-fs-h5); line-height: 1.3; letter-spacing: 0; margin: 0; }
+
+.cf-eyebrow {
+  font-family: var(--cf-font-body);
+  font-weight: 500;
+  font-size: var(--cf-fs-meta);
+  letter-spacing: var(--cf-ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--cf-fg);
+}
+
+.cf-intro  { font-family: var(--cf-font-body); font-weight: 500; font-size: var(--cf-fs-intro); line-height: var(--cf-lh-heading); }
+p, .cf-body{ font-family: var(--cf-font-body); font-weight: 500; font-size: var(--cf-fs-body); line-height: var(--cf-lh-body); letter-spacing: var(--cf-ls-body); margin: 0; }
+.cf-body-long { font-weight: 300; line-height: var(--cf-lh-long); }
+
+.cf-small  { font-size: var(--cf-fs-small); line-height: 1.57; }
+.cf-meta   { font-size: var(--cf-fs-meta);  line-height: 1.83; letter-spacing: var(--cf-ls-eyebrow); text-transform: uppercase; }
+
+code, pre, .cf-mono { font-family: var(--cf-font-mono); font-size: 14px; }
