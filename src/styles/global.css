@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   CreateFuture — Colors & Type
+   Source: CreateFuture Brand Guidelines v1.1 (Jan 2024) + CF-Homepage.fig
+   ========================================================================== */
+
+:root {
+  --cf-carbon: #0a0019;
+  --cf-midnight: #24004c;
+  --cf-white: #ffffff;
+  --cf-cloud: #f2f2f2;
+  --cf-acid: #c4ff35;
+
+  --cf-pink-dark: #7d2271;
+  --cf-pink-medium: #a04594;
+  --cf-pink-bright: #fe7af6;
+  --cf-green-dark: #007d8a;
+  --cf-green-bright: #00ffb5;
+  --cf-blue-dark: #0f8baf;
+  --cf-blue-bright: #10deff;
+
+  --cf-divider: #d6d6d6;
+  --cf-muted-grey: #909090;
+  --cf-ink-muted: #444444;
+
+  --cf-font-display: "Syne", "Syne Bold", system-ui, sans-serif;
+  --cf-font-body: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --cf-font-mono: "Roboto Mono", ui-monospace, Menlo, monospace;
+
+  --cf-ls-display: -0.011em;
+  --cf-ls-body: 0.01em;
+  --cf-ls-eyebrow: 0.03em;
+  --cf-lh-heading: 1.2;
+  --cf-lh-body: 1.5;
+  --cf-lh-long: 1.8;
+
+  --cf-nav-height: 72px;
+}
+
+@theme {
+  --color-cf-carbon: var(--cf-carbon);
+  --color-cf-midnight: var(--cf-midnight);
+  --color-cf-white: var(--cf-white);
+  --color-cf-cloud: var(--cf-cloud);
+  --color-cf-acid: var(--cf-acid);
+  --color-cf-pink-dark: var(--cf-pink-dark);
+  --color-cf-pink-medium: var(--cf-pink-medium);
+  --color-cf-pink-bright: var(--cf-pink-bright);
+  --color-cf-green-dark: var(--cf-green-dark);
+  --color-cf-green-bright: var(--cf-green-bright);
+  --color-cf-blue-dark: var(--cf-blue-dark);
+  --color-cf-blue-bright: var(--cf-blue-bright);
+  --color-cf-divider: var(--cf-divider);
+  --color-cf-muted-grey: var(--cf-muted-grey);
+  --color-cf-ink-muted: var(--cf-ink-muted);
+
+  --font-display: var(--cf-font-display);
+  --font-body: var(--cf-font-body);
+  --font-mono: var(--cf-font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--cf-font-body);
+  color: var(--cf-carbon);
+  background: var(--cf-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: var(--cf-lh-body);
+  letter-spacing: var(--cf-ls-body);
+  font-weight: 500;
+  background: var(--cf-white);
+}
+
+a {
+  color: var(--cf-midnight);
+}
+a:hover {
+  color: var(--cf-carbon);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--cf-font-display);
+  font-weight: 700;
+  line-height: var(--cf-lh-heading);
+  letter-spacing: var(--cf-ls-display);
+  margin: 0;
+}
+
+p {
+  font-family: var(--cf-font-body);
+  font-weight: 500;
+  margin: 0;
+}
