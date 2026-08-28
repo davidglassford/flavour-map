@@ -4,9 +4,8 @@ import FlavourMap from '../components/FlavourMap.vue';
 ---
 
 <Layout title="Global Flavour Explorer">
-  <div class="flex h-[72px] items-center justify-between border-b border-cf-carbon bg-cf-white px-12">
+  <div class="flex h-[72px] items-center border-b border-cf-carbon bg-cf-white px-12">
     <div class="font-display text-lg font-bold tracking-[-0.011em]">Global Flavour Explorer</div>
-    <div class="text-xs uppercase tracking-[0.03em] text-cf-muted-grey">KS4 · Food &amp; Vocabulary</div>
   </div>
 
   <div class="bg-cf-cloud px-12 py-8 text-cf-carbon">
@@ -23,7 +22,7 @@ import FlavourMap from '../components/FlavourMap.vue';
     <div class="mb-8 text-center">
       <div class="text-xs uppercase tracking-[0.03em] text-cf-midnight">The map</div>
       <h2 class="mt-2 text-[36px]">Click a region to explore its flavours</h2>
-      <p class="mx-auto mt-4 max-w-[620px] text-cf-ink-muted">
+      <p class="mx-auto mt-4 max-w-[620px] text-center text-cf-ink-muted">
         Ten flavour regions are highlighted below, matched to the flavour wheel. Grey areas aren't covered yet. Open
         a region to expand individual countries and their signature foods.
       </p>
@@ -31,8 +30,4 @@ import FlavourMap from '../components/FlavourMap.vue';
 
     <FlavourMap client:load />
   </div>
-
-  <footer class="border-t border-cf-carbon px-12 py-8 text-center text-[13px] text-cf-muted-grey">
-    Global Flavour Explorer &middot; built for KS4 Food &amp; Vocabulary lessons
-  </footer>
 </Layout>
