@@ -1,33 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import FlavourMap from '../components/FlavourMap.vue';
+
+const items = [
+  {
+    title: 'Global Flavour Explorer',
+    description:
+      'Explore ten flavour regions of the world, matched to the flavour wheel, and drill into the signature ingredients of each country.',
+    href: '/flavour-map',
+    eyebrow: 'Interactive map',
+  },
+];
 ---
 
-<Layout title="Global Flavour Explorer">
+<Layout title="Food Technology">
   <div class="flex h-[72px] items-center border-b border-cf-carbon bg-cf-white px-12">
-    <div class="font-display text-lg font-bold tracking-[-0.011em]">Global Flavour Explorer</div>
+    <div class="font-display text-lg font-bold tracking-[-0.011em]">Food Technology</div>
   </div>
 
   <div class="bg-cf-cloud px-12 py-8 text-cf-carbon">
     <div class="mx-auto max-w-[900px] text-center">
-      <h1 class="text-[clamp(26px,3.4vw,36px)] text-cf-carbon">Where does flavour come from?</h1>
+      <h1 class="text-[clamp(26px,3.4vw,36px)] text-cf-carbon">Food Technology</h1>
       <p class="mx-auto mt-4 max-w-[640px] text-[15px] leading-[1.8] font-light text-cf-ink-muted">
-        Every region of the world cooks with its own signature ingredients. Explore the map, click a region, and
-        build the vocabulary to describe how food really tastes.
+        A collection of tools and explorations at the intersection of food, flavour, and technology.
       </p>
     </div>
   </div>
 
   <div class="mx-auto max-w-[1440px] px-12 py-16">
-    <div class="mb-8 text-center">
-      <div class="text-xs uppercase tracking-[0.03em] text-cf-midnight">The map</div>
-      <h2 class="mt-2 text-[36px]">Click a region to explore its flavours</h2>
-      <p class="mx-auto mt-4 max-w-[620px] text-center text-cf-ink-muted">
-        Ten flavour regions are highlighted below, matched to the flavour wheel. Grey areas aren't covered yet. Open
-        a region to expand individual countries and their signature foods.
-      </p>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        items.map((item) => (
+          <a
+            href={item.href}
+            class="group block rounded-lg border border-cf-divider bg-cf-white p-6 transition-colors hover:border-cf-midnight"
+          >
+            <div class="text-xs uppercase tracking-[0.03em] text-cf-midnight">{item.eyebrow}</div>
+            <h2 class="mt-2 text-[22px] group-hover:text-cf-midnight">{item.title}</h2>
+            <p class="mt-3 text-[15px] leading-[1.6] text-cf-ink-muted">{item.description}</p>
+          </a>
+        ))
+      }
     </div>
-
-    <FlavourMap client:load />
   </div>
 </Layout>
