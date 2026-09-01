@@ -1,0 +1,198 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface Credit {
+  item: string;
+  source: string;
+  sourceLabel: string;
+  author?: string;
+  license: string;
+}
+
+const credits: Credit[] = [
+  {
+    item: 'Niter kibbeh',
+    source: 'https://www.flickr.com/photos/27119975@N00/51995300201',
+    sourceLabel: 'Flickr',
+    author: 'Edsel Little',
+    license: 'CC BY-SA 2.0',
+  },
+  {
+    item: 'Injera',
+    source:
+      'https://commons.wikimedia.org/wiki/File:Injera,_Ethiopian_bread_made_from_teff_a_cereal_native_to_Ethiopia.JPG',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 4.0',
+  },
+  {
+    item: 'Sumac',
+    source: 'https://commons.wikimedia.org/wiki/File:Sumak_powder.JPG',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'Public domain',
+  },
+  {
+    item: 'Pomegranate molasses',
+    source: 'https://commons.wikimedia.org/wiki/File:Pomegranate_molasses_bottle.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 4.0',
+  },
+  {
+    item: 'Advieh',
+    source: 'https://www.flickr.com/photos/48041244@N05/15833736705',
+    sourceLabel: 'Flickr',
+    author: 'Insatiable Munchies',
+    license: 'CC BY 2.0',
+  },
+  {
+    item: 'Preserved lemon',
+    source: 'https://commons.wikimedia.org/wiki/File:Making_Preserved_Lemons_(2019_edition).jpg',
+    sourceLabel: 'Wikimedia Commons',
+    author: 'George M. Groutas',
+    license: 'CC BY 2.0',
+  },
+  {
+    item: 'Dukkah',
+    source: "https://commons.wikimedia.org/wiki/File:Du'ah_(dukkah)_-_Egyptian_spice_mix.JPG",
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 4.0',
+  },
+  {
+    item: 'Berbere spice',
+    source: 'https://commons.wikimedia.org/wiki/File:Berberespice.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY 3.0 / GFDL',
+  },
+  {
+    item: 'Turmeric',
+    source: 'https://commons.wikimedia.org/wiki/File:Curcuma_longa_roots.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 3.0 / GFDL',
+  },
+  {
+    item: 'Garam masala',
+    source: 'https://commons.wikimedia.org/wiki/File:Garam_Masala.JPG',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'Public domain',
+  },
+  {
+    item: 'Sesame oil',
+    source: 'https://commons.wikimedia.org/wiki/File:SesameSeedOil.png',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'Public domain',
+  },
+  {
+    item: 'Star anise',
+    source: 'https://commons.wikimedia.org/wiki/File:Dried_Star_Anise_Fruit_Seeds.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 4.0',
+  },
+  {
+    item: 'Lemongrass & galangal (lemongrass)',
+    source: 'https://commons.wikimedia.org/wiki/File:Lemongrass_(Cymbopogon_citratus)_1.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 4.0',
+  },
+  {
+    item: 'Lemongrass & galangal (galangal)',
+    source: 'https://commons.wikimedia.org/wiki/File:Galangal.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'Public domain',
+  },
+  {
+    item: 'Coriander',
+    source: 'https://commons.wikimedia.org/wiki/File:Coriander_Seeds.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 4.0',
+  },
+  {
+    item: 'Cumin',
+    source: 'https://commons.wikimedia.org/wiki/File:Cumin.JPG',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'Public domain',
+  },
+  {
+    item: 'Allspice',
+    source: 'https://commons.wikimedia.org/wiki/File:Allspice.JPG',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'Public domain',
+  },
+  {
+    item: 'Epazote',
+    source: 'https://commons.wikimedia.org/wiki/File:Hojas_de_Paico_(Dysphania_ambrosioides).jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 4.0',
+  },
+  {
+    item: 'Palm oil',
+    source: 'https://commons.wikimedia.org/wiki/File:Palm_Oil_(Red_Oil).jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 4.0',
+  },
+  {
+    item: 'Tamarind',
+    source: 'https://commons.wikimedia.org/wiki/File:Tamarind_pods_edible_part.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY 2.0 DE',
+  },
+  {
+    item: 'Dried fish',
+    source: 'https://commons.wikimedia.org/wiki/File:Dried_fish_in_Winneba,_Ghana.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 2.0',
+  },
+  {
+    item: 'Skyr',
+    source: 'https://commons.wikimedia.org/wiki/File:Skyr_%26_Blackberries_20250816_143317.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC0 1.0',
+  },
+  {
+    item: 'Oregano',
+    source: 'https://commons.wikimedia.org/wiki/File:Oregano-spice.jpg',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY-SA 1.0',
+  },
+  {
+    item: 'Baharat',
+    source: 'https://commons.wikimedia.org/wiki/File:Baharat.png',
+    sourceLabel: 'Wikimedia Commons',
+    license: 'CC BY 2.0',
+  },
+];
+---
+
+<Layout title="Image Credits">
+  <div class="flex h-18 items-center border-b border-cf-carbon bg-cf-white px-12">
+    <a href="/" class="font-display text-lg font-bold tracking-[-0.011em]">Food Technology</a>
+  </div>
+
+  <div class="bg-cf-cloud px-12 py-8 text-cf-carbon">
+    <div class="mx-auto max-w-225 text-center">
+      <h1 class="text-[clamp(26px,3.4vw,36px)] text-cf-carbon">Image credits</h1>
+      <p class="mx-auto mt-4 max-w-160 text-[15px] leading-[1.8] font-light text-cf-ink-muted">
+        Photos on the Global Flavour Explorer are sourced from Wikimedia Commons and Flickr under public domain or
+        Creative Commons licences. Attribution is provided below where the licence requires it.
+      </p>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-225 px-12 py-16">
+    <ul class="divide-y divide-cf-divider">
+      {
+        credits.map((credit) => (
+          <li class="flex flex-wrap items-baseline justify-between gap-2 py-3">
+            <span class="text-[15px] text-cf-carbon">{credit.item}</span>
+            <span class="text-sm text-cf-ink-muted">
+              {credit.author && <>{credit.author} via </>}
+              <a href={credit.source} class="text-cf-midnight underline underline-offset-2" target="_blank" rel="noopener noreferrer">
+                {credit.sourceLabel}
+              </a>
+              {' · '}
+              {credit.license}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

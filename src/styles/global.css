@@ -60,47 +60,49 @@
   --font-mono: var(--cf-font-mono);
 }
 
-* {
-  box-sizing: border-box;
-}
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-html {
-  font-family: var(--cf-font-body);
-  color: var(--cf-carbon);
-  background: var(--cf-white);
-  -webkit-font-smoothing: antialiased;
-}
+  html {
+    font-family: var(--cf-font-body);
+    color: var(--cf-carbon);
+    background: var(--cf-white);
+    -webkit-font-smoothing: antialiased;
+  }
 
-body {
-  margin: 0;
-  font-size: 16px;
-  line-height: var(--cf-lh-body);
-  letter-spacing: var(--cf-ls-body);
-  font-weight: 500;
-  background: var(--cf-white);
-}
+  body {
+    margin: 0;
+    font-size: 16px;
+    line-height: var(--cf-lh-body);
+    letter-spacing: var(--cf-ls-body);
+    font-weight: 500;
+    background: var(--cf-white);
+  }
 
-a {
-  color: var(--cf-midnight);
-}
-a:hover {
-  color: var(--cf-carbon);
-}
+  a {
+    color: var(--cf-midnight);
+  }
+  a:hover {
+    color: var(--cf-carbon);
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: var(--cf-font-display);
-  font-weight: 700;
-  line-height: var(--cf-lh-heading);
-  letter-spacing: var(--cf-ls-display);
-  margin: 0;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--cf-font-display);
+    font-weight: 700;
+    line-height: var(--cf-lh-heading);
+    letter-spacing: var(--cf-ls-display);
+    margin: 0;
+  }
 
-p {
-  font-family: var(--cf-font-body);
-  font-weight: 500;
-  margin: 0;
+  p {
+    font-family: var(--cf-font-body);
+    font-weight: 500;
+    margin: 0;
+  }
 }

@@ -16,7 +16,7 @@ const src = computed(() => (props.name ? INGREDIENT_IMAGES[props.name] || FOOD_I
     class="fixed inset-0 z-50 flex items-center justify-center bg-[rgba(10,0,25,0.85)] p-8"
     @click.self="emit('close')"
   >
-    <div class="relative w-[90vw] max-w-[420px] border border-cf-carbon bg-cf-white">
+    <div class="relative w-[90vw] max-w-105 border border-cf-carbon bg-cf-white">
       <button
         type="button"
         class="absolute top-4 right-4 flex h-7 w-7 items-center justify-center border border-cf-carbon bg-cf-white p-0 font-bold"

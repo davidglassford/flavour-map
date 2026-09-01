@@ -4,8 +4,7 @@ import Layout from '../layouts/Layout.astro';
 const items = [
   {
     title: 'Global Flavour Explorer',
-    description:
-      'Explore ten flavour regions of the world, matched to the flavour wheel, and drill into the signature ingredients of each country.',
+    description: 'Explore ten flavour regions of the world, build the vocabulary to successfully evaluate dishes.',
     href: '/flavour-map',
     eyebrow: 'Interactive map',
   },
@@ -13,20 +12,20 @@ const items = [
 ---
 
 <Layout title="Food Technology">
-  <div class="flex h-[72px] items-center border-b border-cf-carbon bg-cf-white px-12">
+  <div class="flex h-18 items-center border-b border-cf-carbon bg-cf-white px-12">
     <div class="font-display text-lg font-bold tracking-[-0.011em]">Food Technology</div>
   </div>
 
   <div class="bg-cf-cloud px-12 py-8 text-cf-carbon">
-    <div class="mx-auto max-w-[900px] text-center">
+    <div class="mx-auto max-w-225 text-center">
       <h1 class="text-[clamp(26px,3.4vw,36px)] text-cf-carbon">Food Technology</h1>
-      <p class="mx-auto mt-4 max-w-[640px] text-[15px] leading-[1.8] font-light text-cf-ink-muted">
-        A collection of tools and explorations at the intersection of food, flavour, and technology.
+      <p class="mx-auto mt-4 max-w-160 text-[15px] leading-[1.8] font-light text-cf-ink-muted">
+        Resources to help you build knowledge and confidence in food technology.
       </p>
     </div>
   </div>
 
-  <div class="mx-auto max-w-[1440px] px-12 py-16">
+  <div class="mx-auto max-w-360 px-12 py-16">
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         items.map((item) => (
